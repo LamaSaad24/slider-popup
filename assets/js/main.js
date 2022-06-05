@@ -56,3 +56,17 @@ function changeImage(i){
     slideItem.childNodes[3].setAttribute('src',img)
     slideItem.childNodes[1].innerHTML=` ${index + 1} / ${imgs}`
 }
+
+
+document.onkeydown = function(e){
+    var keyCode = e.keyCode
+
+
+    if(keyCode == 39){
+        next.click()
+    } else if(keyCode == 37){
+        prev.click()
+    }else if(keyCode == 27){
+        close.click()
+    }
+}
